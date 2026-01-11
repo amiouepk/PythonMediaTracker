@@ -1,8 +1,11 @@
 
 
-def inputLine(str_input):
-    print(f"Enter {str_input}\n")
-    
+def inputLine():
+
+    print("Enter: ", end = '')
+    #print()
+    str_input = int(input())
+
     return str_input
 
 def helpMessage():
@@ -15,13 +18,15 @@ def inputErrorMessage():
 
     return
 
+def incorrectOptionErrorMessage():
+    print(f"Please enter on of the numbers listed\n")
+
 
 def initialMessage():
 
-    print(f"-----------------Welcome-----------------")
     print(f"Options:\n")
     print(f"1. Add/Edit\n")
-    print(f"2. File Options\n")
+    print(f"2. File Creation Options\n")
     print(f"3. Test Options\n")
     print(f"4. Help\n")
     print(f"5. Exit\n")
@@ -37,9 +42,10 @@ def editFilesOptionsMessage():
         
 def fileOptionsMessage():
     print(f"Options:\n")
-    print(f"1. Add")
-    print(f"2. Edit")
-    print(f"3. Delete")
+    print(f"1. Create Default Files\n")
+    print(f"2. Create Custom Files\n")
+    print(f"3. Edit File Names\n")
+    print(f"4. Previous Menu\n")
 
 def testOptionsMessage():
     print(f"Options:\n")
