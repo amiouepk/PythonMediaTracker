@@ -1,36 +1,42 @@
-import pathlib 
+import os
 
-FILE_PATH = '/'
-FOLDER_PATH = '/files/'
+FOLDER = 'files'
 
-def ifFolderExists(foldername):
-    folder_path = pathlib.Path(FILE_PATH + foldername)
+#def fileStorage
 
-    if (folder_path.exists()):
-        return True
-    else:
-        return False
-
-def ifFileExists(filename):
-    file_path = pathlib.Path(FILE_PATH + filename)
-
-    if (file_path.exists()):
-        return True
-    else:
-        return False
+def unexpectedErrorMessage(Exception):
+    print(f"A unexpected error has occured: {Exception}")
     
 def createFolder(foldername):
     print("n")
 
 def createFile(filename):
-    if ifFolderExists(filename):
-        print(f"A file with the name {filename} already exists. Please chose another name.\n")
-    else:
-        try:
-            open(filename, 'x', encoding=None)
-        except: 
-            print("An error has occured\n")
+
+    file_path = os.path.join(FOLDER, filename + '.csv')
+    try:
+        open(file_path, 'x', encoding=None)
+    except FileExistsError: 
+        print(f"\nFile with the name {filename} already exists")
+    except Exception:
+        unexpectedErrorMessage(Exception)
+        
     return
+
+def renameFile(currentfilename, newfilename):
+
+    currentfilename = os.path.join()
+
+    try: 
+        os.rename(currentfilename, newfilename)
+    except FileNotFoundError:
+        print(f'File by the name of {currentfilename} does not exist.\n')
+    except FileExistsError:
+        print(f'File by the name of {newfilename} already exists.\n')
+    except Exception:
+        unexpectedErrorMessage(Exception)
+
+    return
+
     
 
 
