@@ -41,12 +41,22 @@ def fileOptions():
                             case '1':
                                 break
                             case '2':
-                                return
+                                break
                             case _:
                                 cio.incorrectOptionErrorMessage()
-            
+                                continue
+
+                    if createCustomFileInput is '2':
+                        break
+
             case '3': #Delete File
-                print('Placeholder')
+                while 1:
+                    print('Enter Desired File Name: ', end = '')
+                    filename = input()
+                    fio.deleteFile(filename)
+                    break
+
+
             case '4': #Edit File Name
                 print('Enter Current File Name: ', end = '')
                 currentfilename = input()
