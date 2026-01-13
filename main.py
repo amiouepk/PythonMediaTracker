@@ -24,7 +24,7 @@ def fileOptions():
                 #fio.createFile('')
                 
             case '2': #Create Custom Files
-                
+
                 while 1:
                     print('Enter Desired File Name: ', end = '')
                     filename = input()
@@ -65,8 +65,6 @@ def fileOptions():
                 newfilename = input()
 
                 fio.renameFile(currentfilename, newfilename)
-            case' 4':
-                print("place holder\n")
             case '5': #Previous Menu
                 return
             case '6':
