@@ -1,3 +1,5 @@
+import typing
+
 
 class mediaData:
     # 
@@ -12,10 +14,15 @@ class mediaData:
     # Seasons = 0
 
     #string, string, partial
-    def __init__ (category, name, complete):
-        mediaData.category = category
-        mediaData.name = name
-        mediaData.complete = complete
+    def __init__ (self, category, name, description, complete = False, rating = "not rated"):
+        self.category = category
+        self.name = name
+        self.description = description
+        self.complete = complete
+        self.rating = rating
+        
+        
+
 
         #if category is 'tvshow':
 
@@ -30,7 +37,6 @@ class mediaData:
         mediaData.genre = genre
 
     
-
 
 
 
