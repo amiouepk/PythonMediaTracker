@@ -1,5 +1,5 @@
 
-
+#General Functions
 def inputLine():
 
     print("Enter: ", end = '')
@@ -21,6 +21,7 @@ def incorrectOptionErrorMessage():
     print(f"\nPlease enter one of the numbers listed")
 
 
+#main.py output functions
 def initialMessage():
 
     print(f"Options:\n")
@@ -54,7 +55,22 @@ def testOptionsMessage():
     print(f"3. Delete")
 
 
+#mediaData.py Output Options
 
+
+
+# date.py Class Options
+def changeDateOptions():
+    print("Options: ")
+    print("0. Previous Menu")
+    print("1. All")
+    print("2. Year")
+    print("3. Month")
+    print("4. Day")
+    print("Typically you can remember the year first, and than the month, and then the day")
+
+def changeDayOptions():
+    print("Enter the desired date: ")
 
 
 

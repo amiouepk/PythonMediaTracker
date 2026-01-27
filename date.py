@@ -1,4 +1,5 @@
-
+import consoleio as cio
+from datetime import datetime
 
 
 class date:
@@ -24,10 +25,28 @@ class date:
     def changeYear(self, year):
         self.year = year
 
-    def changeDate(self, year = 0, month = 0, day = 0):
-        if year is 0:
-            return
-        if month is 0
+    def changeDate(self, year, month, day):
+        cio.changeDateOptions()
+        changeDateInputOption = cio.inputLine()
+
+        while 1:
+
+            match changeDateInputOption:
+                case '0': 
+                    return
+                case '1':
+                    date.changeDay()
+                case '2':
+                    date.changeMonth()
+                case '3':
+                    date.changeYear()
+                case _:
+                    cio.incorrectOptionErrorMessage()
+                    continue
+
+
+
+
 
     def printDate (self):
         
@@ -41,3 +60,13 @@ class date:
             else:
                 print(f"{self.day}/{self.month}/{self.year}")
         
+
+
+
+if __name__ == '__main__':
+
+
+    print()
+
+
+
