@@ -9,7 +9,7 @@ class date:
     # day does up until 31/30/28/29 depending on the month
     # years whatever
 
-    style = True #US date or rest of world date
+    US = True #US date or rest of world date
 
     def __init__(self, year = 0, month = 0, day = 0):
         self.day = day
@@ -55,7 +55,7 @@ class date:
         elif self.day is 0:
             print(f"{self.month}/{self.year}")
         else:
-            if date.style is True:
+            if date.US is True:
                 print(f"{self.month}/{self.day}/{self.year}")
             else:
                 print(f"{self.day}/{self.month}/{self.year}")

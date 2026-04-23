@@ -7,7 +7,13 @@ import fileio as fio
 filename = 'text.txt'
 
 def editFiles():
-    cio.editFilesOptionsMessage()
+
+    while True:
+        cio.editFilesOptionsMessage()
+        str_input = cio.inputLine()
+
+        # match str_input:
+        #     case '1':
 
 def fileOptions():
 
@@ -17,11 +23,7 @@ def fileOptions():
 
         match file_options_input:
             case '1': #Create Default files
-                fio.createFile('movies')
-                fio.createFile('books')
-                fio.createFile('tvshows')
-                fio.createFile('games')
-                #fio.createFile('')
+                fio.createDefaultFiles()
                 
             case '2': #Create Custom Files
 
@@ -74,7 +76,7 @@ def fileOptions():
 
 def testFiles():
 
-    while 1 == 1:
+    while True:
         cio.testOptionsMessage()
         str_input = cio.inputLine()
 
@@ -94,7 +96,7 @@ def intitalOptions():
 
     print(f"-----------------Welcome-----------------")
 
-    while 1 == 1:
+    while True:
         cio.initialMessage()
         initial_opt_input = cio.inputLine()
 

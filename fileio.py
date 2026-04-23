@@ -1,6 +1,12 @@
 import os
 import consoleio as cio
 
+'''
+MAKE ONE FILE INSTEAD OF MULTIPLE NOT NECESSARY
+'''
+
+
+
 FOLDER = 'files'
 
 #def fileStorage
@@ -8,7 +14,7 @@ FOLDER = 'files'
 def unexpectedErrorMessage(Exception):
     print(f"A unexpected error has occured: {Exception}")
     
- 
+# File creation/deletion functions
 def createFile(filename):
 
     file_path = os.path.join(FOLDER, filename + '.csv')
@@ -23,6 +29,12 @@ def createFile(filename):
         
     return
 
+def createDefaultFiles():
+    
+    createFile('movies')
+    createFile('books')
+    createFile('tvshows')
+    createFile('games')
 
 def renameFile(currentfilename, newfilename):
 
@@ -41,12 +53,15 @@ def renameFile(currentfilename, newfilename):
 
     return
 
+
+
 def deleteFile(filename):
 
     file_path = os.path.join(FOLDER, filename + '.csv')
 
     try:
         os.remove(file_path)
+        print(f"file {filename + '.csv'} has been successfully deleted")
     except FileNotFoundError:
         print(f"\nFile with the name {filename} does not exists")
     except PermissionError:
@@ -56,8 +71,19 @@ def deleteFile(filename):
     
     return
         
+# File modification funcitons
 
+def add_entry():
 
+    pass
+
+def edit_entry():
+
+    pass
+
+def delete_entry():
+
+    pass
 
 if __name__ == '__main__':
     print(f"yo yo")
