@@ -1,4 +1,3 @@
-
 #General Functions
 def inputLine():
 
@@ -25,36 +24,20 @@ def incorrectOptionErrorMessage():
 def initialMessage():
 
     print(f"Options:\n")
-    print(f"1. Add/Edit\n")
-    print(f"2. File Creation Options\n")
-    print(f"3. Test Options\n")
+    print(f"0. Exit\n")
+    print(f"1. Add Entry")
+    print(f"3. Category Options\n")
     print(f"4. Help\n")
     print(f"5. Exit\n")
 
     return
 
-def editFilesOptionsMessage():
-    print(f"Options:\n")
-    print(f"1. Add")
-    print(f"2. Edit")
-    print(f"3. Delete")
-
         
-def fileOptionsMessage():
+def categoryOptions():
     print(f"Options:\n")
-    print(f"1. Create Default Files\n")
-    print(f"2. Add Files\n")
-    print(f"3. Delete Files\n")
-    print(f"4. Edit File Names\n")
-    print(f"5. Previous Menu\n")
-
-def testOptionsMessage():
-    print(f"Options:\n")
-    print(f"1. Create Default Files")
-    print(f"2. Edit")
-    print(f"3. Delete")
-
-
+    print(f"0. Previous Menu\n")
+    print(f"1. Edit Category\n")
+    print(f"2. Add Category\n")
 #mediaData.py Output Options
 
 

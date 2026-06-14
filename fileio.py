@@ -1,11 +1,10 @@
 import os
 import consoleio as cio
 
+
 '''
 MAKE ONE FILE INSTEAD OF MULTIPLE NOT NECESSARY
 '''
-
-
 
 FOLDER = 'files'
 
@@ -13,6 +12,13 @@ FOLDER = 'files'
 
 def unexpectedErrorMessage(Exception):
     print(f"A unexpected error has occured: {Exception}")
+
+def doFilesExist(filename):
+    if os.path.isfile(f"{FOLDER}/{filename}"):
+        pass
+    else:
+        createFile(filename)
+
     
 # File creation/deletion functions
 def createFile(filename):
@@ -29,12 +35,6 @@ def createFile(filename):
         
     return
 
-def createDefaultFiles():
-    
-    createFile('movies')
-    createFile('books')
-    createFile('tvshows')
-    createFile('games')
 
 def renameFile(currentfilename, newfilename):
 
@@ -53,6 +53,9 @@ def renameFile(currentfilename, newfilename):
 
     return
 
+
+def resetFiles():
+    pass
 
 
 def deleteFile(filename):
@@ -73,11 +76,11 @@ def deleteFile(filename):
         
 # File modification funcitons
 
-def add_entry():
+def addEntry():
 
     pass
 
-def edit_entry():
+def editEntry():
 
     pass
 

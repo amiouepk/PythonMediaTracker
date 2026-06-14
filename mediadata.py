@@ -19,7 +19,7 @@ class MediaData:
     # Seasons = 0
 
     #string, string, partial
-    def __init__ (self, category, name, description, complete = False, rating = "not rated", rating_scale):
+    def __init__ (self, category, name, description, complete = False, rating = "not rated", rating_scale="not rated"):
         self.category = category
         self.name = name
         self.description = description
