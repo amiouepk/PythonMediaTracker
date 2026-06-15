@@ -14,7 +14,7 @@ FOLDER = os.getcwd() + '/files'
 def unexpectedErrorMessage(Exception):
     print(f"A unexpected error has occured: {Exception}")
 
-def doFilesExist(filename):
+def doesFileExist(filename):
     # print(f"Current Path: {os.getcwd()}")
     filepath = FOLDER + '/' + filename
 

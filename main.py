@@ -36,8 +36,8 @@ def categoryOptions():
             
 def intitalOptions():
 
-    fio.doFilesExist('media.csv')
-    fio.doFilesExist('categories.csv')
+    fio.doesFileExist('media.csv')
+    fio.doesFileExist('categories.csv')
 
     print(f"-----------------Welcome-----------------")
 
