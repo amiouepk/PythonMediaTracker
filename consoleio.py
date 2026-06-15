@@ -25,10 +25,9 @@ def initialMessage():
 
     print(f"Options:\n")
     print(f"0. Exit\n")
-    print(f"1. Add Entry")
+    print(f"1. Add Entry\n")
     print(f"3. Category Options\n")
     print(f"4. Help\n")
-    print(f"5. Exit\n")
 
     return
 
