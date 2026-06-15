@@ -1,4 +1,5 @@
 import os
+import sys
 import consoleio as cio
 
 
@@ -6,7 +7,7 @@ import consoleio as cio
 MAKE ONE FILE INSTEAD OF MULTIPLE NOT NECESSARY
 '''
 
-FOLDER = 'files'
+FOLDER = os.getcwd() + '/files'
 
 #def fileStorage
 
@@ -14,16 +15,24 @@ def unexpectedErrorMessage(Exception):
     print(f"A unexpected error has occured: {Exception}")
 
 def doFilesExist(filename):
-    if os.path.isfile(f"{FOLDER}/{filename}"):
-        pass
-    else:
+    # print(f"Current Path: {os.getcwd()}")
+    filepath = FOLDER + '/' + filename
+
+    # print(os.path.isfile(filepath))
+
+    # print(f"Filepath: {filepath}")
+    # print(f"{FOLDER}/{filename}")
+
+    if not os.path.isfile(filepath):
         createFile(filename)
+    else:
+        pass
 
     
 # File creation/deletion functions
 def createFile(filename):
 
-    file_path = os.path.join(FOLDER, filename + '.csv')
+    file_path = os.path.join(FOLDER, filename)
 
     try:
         open(file_path, 'x', encoding=None)
