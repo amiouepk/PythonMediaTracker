@@ -31,6 +31,8 @@ def initialMessage():
 
     return
 
+def addEditOptionsMessage():
+    pass
         
 def categoryOptions():
     print(f"Options:\n")

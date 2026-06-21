@@ -1,5 +1,6 @@
 import consoleio as cio
 import fileio as fio
+import mediadata as md
 
 # Change files options to category options with each file corresponding to a category
 
@@ -7,14 +8,23 @@ import fileio as fio
 media_file = 'media.csv'
 category_file = 'categories.csv'
 
-def editFiles():
+def addEditOptions():
 
     while True:
-        cio.editFilesOptionsMessage()
+        cio.addEditOptionsMessage()
         str_input = cio.inputLine()
 
-        # match str_input:
-        #     case '1':
+        match str_input:
+            case '0':
+                break
+            case '1':
+                fio.addEntry()
+            case '2': #Edit Existing Category
+                fio.editEntry()
+            case '3': #List #x of entries
+                pass
+            case '4': #List all entries
+                pass
 
 def categoryOptions():
     while True:
@@ -24,10 +34,23 @@ def categoryOptions():
         match cat_opt_input:
             case '0': #Previous Menu
                 break
-            case '1': #Edit Existing Category
-                pass
-            case '2': #Add New Category
-                pass
+            case '1': #Add New Category          
+                fio.addCategory()
+            
+                
+        # try:
+        #     open(FOLDER + '/media.csv', 'w+')
+        #     cio.categoryOptions()
+        #     cat_opt_input = cio.inputLine()
+
+            
+
+        # except FileNotFoundError:
+        #     print(f'File by the name of {'media.csv'} does not exist.\n')
+        # except Exception:
+        #     unexpectedErrorMessage(Exception)
+
+        
         
 
     pass
@@ -41,7 +64,6 @@ def intitalOptions():
 
     print(f"-----------------Welcome-----------------")
 
-
     while True:
         cio.initialMessage()
         initial_opt_input = cio.inputLine()
@@ -51,7 +73,7 @@ def intitalOptions():
             case '0': #Exit
                 exit(0)
             case '1': # Add/Edit Media
-                add()
+                addEditOptions()
             case '2': # Add/Edit Category
                 categoryOptions()
             case '3': # Reset

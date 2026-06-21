@@ -3,7 +3,7 @@ import typing
 
 CATEGORY_DEFAULT = ''
 NAME_DEFAULT = ''
-RATING_DEFAULT = "not rated"
+CCC = "not rated"
 
 
 class MediaData:
@@ -19,12 +19,15 @@ class MediaData:
     # Seasons = 0
 
     #string, string, partial
-    def __init__ (self, category, name, description, complete = False, rating = "not rated", rating_scale="not rated"):
-        self.category = category
+    def __init__ (self, name, medium, category, description, comments, complete, rating = "not rated", rating_scale="not rated"):
         self.name = name
+        self.medium = medium
+        self.category = category
         self.description = description
+        self.comments = commentss
         self.complete = complete
         self.rating = rating
+        self.rating_scale = rating_scale
         
     def dipslay_media_category(self):
         if self.category is '':
@@ -53,8 +56,10 @@ class MediaData:
     def display_media_rating(self):
         if self.rating_scale is '':
             if self.rating is "not rated":
+                pass
 
         if self.rating is "not rated":
+            pass
 
 
     
